@@ -1,0 +1,61 @@
+html[data-xydy-jingxuan="home"][data-xydy-navigation="on"] #douyin-right-container {
+  padding-top: 0 !important;
+}
+
+html[data-xydy-jingxuan="home"][data-xydy-styles="on"] .discover-tab-bar {
+  display: none !important;
+}
+
+html[data-xydy-jingxuan="home"][data-xydy-styles="on"] .discover-tab-container > .semi-tabs-content {
+  height: 100% !important;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"]
+  #dy-modal-video-container-waterFall .modalPlayer .xg-video-container {
+  height: 100% !important;
+  bottom: 0 !important;
+}
+
+/* Keep the upstream revealed position, minus the native wrapper's 48px offset. */
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"]
+  #dy-modal-video-container-waterFall .modalPlayer.xgplayer
+  .player-position-box-bottom > :is(.xgplayer-video-info-wrap, .douyin-player-video-info-wrap) {
+  bottom: calc(76px - 48px) !important;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #hideInMiniWindow {
+  width: 0 !important;
+  max-width: 0 !important;
+  flex: 0 0 0 !important;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard[data-xydy-comments-mounted] {
+  box-sizing: border-box !important;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard #relatedVideoCard {
+  width: 100% !important;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard [data-e2e="comment-list"] {
+  overscroll-behavior: contain;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard > :is(.xydy-drag-handle, .xydy-resize-handle) {
+  touch-action: none;
+}
+
+html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard > .xydy-comments-pin {
+  right: 54px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-xydy-jingxuan="player"] {
+    --xydy-jingxuan-proximity-duration: 0s;
+  }
+  html[data-xydy-jingxuan] :is(#douyin-header, #douyin-navigation, #douyin-header-menuCt, .xydy-search-shell),
+  html[data-xydy-jingxuan="player"][data-xydy-styles="on"] #videoSideCard[data-xydy-comments-mounted="true"] {
+    animation: none !important;
+    transition: none !important;
+  }
+}
