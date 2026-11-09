@@ -329,6 +329,15 @@ if (isMergedBuild) {
  *
 ${license}
 */`);
+  // Keep the embedded stylesheet readable in the published userscript.
+  patch('src/content/style-payload', part => part.replace(
+    /var t=("(?:[^"\\]|\\.)*");function install/,
+    (_, encodedCss) => {
+      const lines = JSON.parse(encodedCss).split(/(?<=\n)/);
+      return 'var t = [\n' + lines.map(line => '    ' + JSON.stringify(line)).join(',\n')
+        + "\n  ].join('');\n  function install";
+    }
+  ));
   fs.writeFileSync('outputs/shDouYinTools.user.js', source);
 }
 module.exports = source;

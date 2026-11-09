@@ -18,3 +18,13 @@
 4. 刷新抖音网页，按 **Alt+X** 打开设置。开启液态玻璃后，鼠标移到页面左边缘可展开侧栏，移到顶部可唤出搜索。
 
 升级时打开同一个安装链接，按油猴提示更新即可。
+
+## 效果图
+
+### 液态玻璃播放条
+
+![液态玻璃播放条](docs/screenshots/liquid-glass-player.png)
+
+### 从左侧唤出的液态玻璃导航
+
+![液态玻璃侧栏](docs/screenshots/liquid-glass-sidebar.png)
